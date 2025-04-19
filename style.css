@@ -1,0 +1,424 @@
+/* ===== RESET GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+h3 {
+  font-weight: 400;
+  color: #bbb;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #0a0a0a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo span {
+  color: #6C63FF;
+}
+
+nav .menu {
+  display: flex;
+  gap: 30px;
+}
+
+nav .menu li a {
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav .menu li a:hover {
+  color: #6C63FF;
+}
+
+#hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ===== HERO COM IMAGEM DE FUNDO ===== */
+.hero-foto {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-foto img.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-texto {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-texto h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-texto p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  color: #ccc;
+}
+
+.botao {
+  background-color: #6C63FF;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background-color: #5146d8;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 100px 10%;
+  gap: 40px;
+  background-color: #1a1a1a;
+}
+
+.sobre .texto {
+  flex: 1;
+}
+
+.sobre .subtitulo {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.sobre .assinatura {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.sobre .imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre .imagem img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border: 2px solid #333;
+}
+
+/* ===== PORTFÓLIO ===== */
+.portfolio {
+  background-color: #1a1a1a;
+  padding: 80px 10%;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.categoria {
+  color: #ccc;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+/* ===== CARROSSEL ===== */
+.carrossel-externo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.carrossel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrossel-loop {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carrossel-loop img {
+  width: 373px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda discreta */
+}
+
+.carrossel-loop img:hover {
+  cursor: pointer;
+}
+
+.btn-carrossel {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.btn-carrossel:hover {
+  color: #6C63FF;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #111;
+  padding: 80px 10%;
+  gap: 40px;
+  align-items: center;
+}
+
+.contato .formulario {
+  flex: 1;
+}
+
+.contato .formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato input, .contato textarea {
+  padding: 12px;
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 6px;
+  resize: none;
+}
+
+.contato button {
+  padding: 12px;
+  background-color: #6C63FF;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contato button:hover {
+  background-color: #5146d8;
+}
+
+.contato .imagem-contato {
+  flex: 1;
+}
+
+.contato .imagem-contato img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+.lightbox-caption {
+  color: #ccc;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  max-width: 90%;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.lightbox-controls button {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 5px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lightbox-controls button:hover {
+  background: #6C63FF;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #0a0a0a;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .sobre, .contato {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  nav .menu.ativo {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .carrossel-loop img {
+    width: 80vw;
+    max-width: 250px;
+  }
+
+  .btn-carrossel {
+    font-size: 1.5rem;
+  }
+
+  .carrossel-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carrossel-loop {
+    flex-wrap: nowrap;
+  }
+}

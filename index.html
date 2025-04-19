@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspira Criativo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Inspira<span>Criativo</span></div>
+    <nav id="nav">
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div id="hamburger">&#9776;</div>
+    </nav>
+  </header>
+
+  <section class="hero-foto">
+    <div class="hero-texto">
+      <h1>Imagens que Inspiram</h1>
+      <p>Fotografia autoral e conteúdo criativo para quem busca se destacar.</p>
+      <a href="#portfolio" class="botao">Ver Portfólio</a>
+    </div>
+    <img src="assets/hero-foto.jpg" alt="Foto destaque" class="hero-bg" />
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="texto">
+      <h2>Sobre</h2>
+      <h3 class="subtitulo">Quem está por trás da lente</h3>
+      <p>Fotógrafa e criadora de conteúdo visual com paixão por registrar momentos únicos.</p>
+      <p class="assinatura">— Por <strong>Aline Duarte</strong></p>
+    </div>
+    <div class="imagem">
+      <img src="assets/sobre-nos.jpg" alt="Sobre mim" />
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h2>Portfólio Fotográfico</h2>
+<h3 class="categoria">Retratos</h3>
+<div class="carrossel-externo">
+  <button class="btn-carrossel" id="prev-retratos">←</button>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-loop" id="carrossel-retratos">
+      <img src="assets/retratos/retrato1.jpg" data-album="retratos" data-caption="Retrato 1" />
+      <img src="assets/retratos/retrato2.jpg" data-album="retratos" data-caption="Retrato 2" />
+      <img src="assets/retratos/retrato3.jpg" data-album="retratos" data-caption="Retrato 3" />
+      <img src="assets/retratos/retrato4.jpg" data-album="retratos" data-caption="Retrato 4" />
+      <img src="assets/retratos/retrato5.jpg" data-album="retratos" data-caption="Retrato 5" />
+      <img src="assets/retratos/retrato6.jpg" data-album="retratos" data-caption="Retrato 6" />
+    </div>
+  </div>
+  <button class="btn-carrossel" id="next-retratos">→</button>
+</div>
+
+<h3 class="categoria">Eventos</h3>
+<div class="carrossel-externo">
+  <button class="btn-carrossel" id="prev-eventos">←</button>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-loop" id="carrossel-eventos">
+      <img src="assets/eventos/evento1.jpg" data-album="eventos" data-caption="Evento 1" />
+      <img src="assets/eventos/evento2.jpg" data-album="eventos" data-caption="Evento 2" />
+      <img src="assets/eventos/evento3.jpg" data-album="eventos" data-caption="Evento 3" />
+      <img src="assets/eventos/evento4.jpg" data-album="eventos" data-caption="Evento 4" />
+      <img src="assets/eventos/evento5.jpg" data-album="eventos" data-caption="Evento 5" />
+    </div>
+  </div>
+  <button class="btn-carrossel" id="next-eventos">→</button>
+</div>
+
+<h3 class="categoria">Lifestyle</h3>
+<div class="carrossel-externo">
+  <button class="btn-carrossel" id="prev-lifestyle">←</button>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-loop" id="carrossel-lifestyle">
+      <img src="assets/lifestyle/lifestyle1.jpg" data-album="lifestyle" data-caption="Lifestyle 1" />
+      <img src="assets/lifestyle/lifestyle2.jpg" data-album="lifestyle" data-caption="Lifestyle 2" />
+      <img src="assets/lifestyle/lifestyle3.jpg" data-album="lifestyle" data-caption="Lifestyle 3" />
+      <img src="assets/lifestyle/lifestyle4.jpg" data-album="lifestyle" data-caption="Lifestyle 4" />
+      <img src="assets/lifestyle/lifestyle5.jpg" data-album="lifestyle" data-caption="Lifestyle 5" />
+    </div>
+  </div>
+  <button class="btn-carrossel" id="next-lifestyle">→</button>
+</div>
+
+<h3 class="categoria">Produtos</h3>
+<div class="carrossel-externo">
+  <button class="btn-carrossel" id="prev-produtos">←</button>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-loop" id="carrossel-produtos">
+      <img src="assets/produtos/produto1.jpg" data-album="produtos" data-caption="Produto 1" />
+      <img src="assets/produtos/produto2.jpg" data-album="produtos" data-caption="Produto 2" />
+      <img src="assets/produtos/produto3.jpg" data-album="produtos" data-caption="Produto 3" />
+      <img src="assets/produtos/produto4.jpg" data-album="produtos" data-caption="Produto 4" />
+      <img src="assets/produtos/produto5.jpg" data-album="produtos" data-caption="Produto 5" />
+    </div>
+  </div>
+  <button class="btn-carrossel" id="next-produtos">→</button>
+</div>
+
+
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="formulario">
+      <h2>Fale comigo</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="imagem-contato">
+      <img src="assets/contato.jpg" alt="Contato" />
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption"></p>
+    <div class="lightbox-controls">
+      <button id="prev">←</button>
+      <button id="next">→</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Inspira Criativo · Feito com paixão pela imagem</p>
+  </footer>
+</body>
+</html>
